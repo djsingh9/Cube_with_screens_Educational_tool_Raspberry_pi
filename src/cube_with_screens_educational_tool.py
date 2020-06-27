@@ -56,7 +56,6 @@ select0=0
 select1=0
 select2=0
 
-
 DC1= 12
 RST1= 23
 SPI_PORT = 0
@@ -66,7 +65,6 @@ DC2= 12
 RST2= 13
 SPI_PORT = 0
 SPI_DEVICE2= 0
-
 
 DC3= 12
 RST3= 26
@@ -155,7 +153,6 @@ def select_2(k):
 ####################################################################
                 #Random Face array sequence generation
 ####################################################################
-
 def Random_face_array():
  global face_array
  global facerandom_seq
@@ -203,7 +200,6 @@ class SensorADXL345(object):
             raise ValueError("Invalid output data rate code.")
         self.bus.write_byte_data(self.addr, 0x2c, rate | lp_bit)
         
-
     def default_init(self):
         self.data_format(False, 2)
         self.output_data_rate(0xA)
@@ -216,7 +212,6 @@ class SensorADXL345(object):
         return (ax, ay, az)
 #######################################
 # select the correct i2c bus for this revision of Raspberry Pi
-
 revision = ([l[12:-1] for l in open('/proc/cpuinfo','r').readlines() if l[:8]=="Revision"]+['0000'])[0]
 bus = smbus.SMBus(1 if int(revision, 16) >= 4 else 0)
 x=0
@@ -1560,7 +1555,6 @@ def disp_levels():
       disp[3].display(image1)
             
 ###############################################################
-
 Random_face_array()
 
 while(True):
@@ -1675,7 +1669,6 @@ while(True):
     if(flag_levelselect==0 and flag_level_disp==0 ):
       disp_levels()
       flag_level_disp=1
-
 
     if(levelselect==1):
         print('alphabets')
