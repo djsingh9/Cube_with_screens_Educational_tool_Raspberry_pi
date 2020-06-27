@@ -1,6 +1,7 @@
-# CUBE_WITH_SCREENS_EDUCATIONAL_TOOL
+# CUBE_WITH_SCREENS_EDUCATIONAL_TOOL_RASPBERRY_PI
 
 File Name: cube_with_screens_educational_tool.py
+Platform: Raspberry Pi
 
 Description:
  1. Cube shaped device with screens on each surface.
